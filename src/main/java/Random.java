@@ -26,16 +26,13 @@ public class Random {
     }
 
     public void squarePatch(int n){
-
+        StringBuilder value = new StringBuilder();
         for(int i = 0; i<n; i++){
-            System.out.print("[");
-
-            for(int j = 0; j<n; j++){
-
-                System.out.print(" " + n + " ");
-            }
-            System.out.print("]");
-            System.out.println();
+            value.append(n).append(",");
+        }
+        StringBuilder result = new StringBuilder("[" + value.substring(0,value.length()-1)+ "]");
+        for(int j = 0; j<n;j++){
+            System.out.println(result);
         }
     }
 
